@@ -1,16 +1,28 @@
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from rest_framework.viewsets import ModelViewSet
-from .models import BlogPost
-from .serializers import BlogPostSerializer
+from rest_framework import viewsets
+from .models import Country, State, Tribe, BlogPost, Comment
+from .serializers import CountrySerializer, StateSerializer, TribeSerializer, BlogPostSerializer, CommentSerializer
 
 
-class BlogPostViewSet(ModelViewSet):
+class CountryViewSet(viewsets.ModelViewSet):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+
+
+class StateViewSet(viewsets.ModelViewSet):
+    queryset = State.objects.all()
+    serializer_class = StateSerializer
+
+
+class TribeViewSet(viewsets.ModelViewSet):
+    queryset = Tribe.objects.all()
+    serializer_class = TribeSerializer
+
+
+class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
 
-    @action(detail=False, methods=['get'])
-    def recent_posts(self, request):
-        recent_posts = self.get_queryset().order_by('-created_at')[:5]
-        serializer = self.get_serializer(recent_posts, many=True)
-        return Response(serializer.data)
+
+class CommentViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer

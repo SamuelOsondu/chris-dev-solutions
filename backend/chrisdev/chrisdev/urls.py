@@ -8,6 +8,8 @@ urlpatterns = [
     path("ckeditor5/", include('django_ckeditor_5.urls')),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
+    path("core/", include("core.urls")),
+
     path("auth/", include('djoser.urls')),
     path("auth/", include('djoser.urls.jwt')),
 
