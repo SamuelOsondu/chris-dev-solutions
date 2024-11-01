@@ -115,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-MEDIA_URL = 'https://fondstack.b-cdn.net/'
+MEDIA_URL = 'image/'
 MEDIA_ROOT = BASE_DIR / 'image/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -125,8 +125,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'core.User'
 
 
-DOMAIN = "chrisdev.com"
-SITE_NAME = "chrisdev"
+DOMAIN = "afriarts.netlify.app"
+SITE_NAME = "AFRIARTS"
 
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',
