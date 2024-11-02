@@ -15,4 +15,4 @@ Instructions for setting up and running the project locally.
 
 ## Documentation
 
-For detailed documentation, [click here](https://drive.google.com/file/d/1AikddUphHX4HSmNWpLl_ntlPW2UbfUh_/view?usp=drivesdk).
+For detailed project idea documentation, [click here](https://drive.google.com/file/d/1AikddUphHX4HSmNWpLl_ntlPW2UbfUh_/view?usp=drivesdk).
